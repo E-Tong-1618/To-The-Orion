@@ -32,14 +32,18 @@ h3 {
 
 .sources {
   color: rgb(100, 100, 100);
-}</style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-tag name="Bad-Ending" color="red"></tw-tag><tw-tag name="Good-Ending" color="yellow"></tw-tag><tw-passagedata pid="1" name="Title" tags="" position="900,800" size="100,100">&lt;center&gt;&lt;h1&gt;To The Orion&lt;/h1&gt;&lt;/center&gt;
+}</style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-tag name="Bad-Ending" color="red"></tw-tag><tw-tag name="Good-Ending" color="yellow"></tw-tag><tw-tag name="Best-Ending" color="green"></tw-tag><tw-passagedata pid="1" name="Title" tags="" position="900,800" size="100,100">&lt;center&gt;&lt;h1&gt;To The Orion&lt;/h1&gt;&lt;/center&gt;
 &lt;center&gt;&lt;h3&gt;By Ethan Tong&lt;/h3&gt;&lt;/center&gt;
 
 
 &lt;center&gt;[[ -- Start -- -&gt;Start]]&lt;/center&gt;
 
 
-&lt;tw-passage class=&quot;sources&quot;&gt;This short narrative takes influence from a handful of sources. The narrative structure is inspired by &quot;Zork&quot; by Mark Liebling et al. and the mobile game &quot;Full of Stars&quot; by ATGames. The narrative&#39;s setting is inspired by the games &quot;Sable&quot; by Shedworks and &quot;FAR: Lone Sails&quot; by Okomotive.&lt;/tw-passage&gt;</tw-passagedata><tw-passagedata pid="2" name="Start" tags="" position="1050,800" size="100,100">You finally reach the lone trading outpost just as the sky begins to darken. You descend from your speeder and head for the back of the outpost; the drifty dealer Kayne should be around there. Soon enough, you see a man in a dark red hood leaning against the wall in the dim yellow light.
+&lt;tw-passage class=&quot;sources&quot;&gt;This short narrative takes influence from a handful of sources. The narrative structure is inspired by &quot;Zork&quot; by Mark Liebling et al. and the mobile game &quot;Full of Stars&quot; by ATGames. The narrative&#39;s setting is inspired by the games &quot;Sable&quot; by Shedworks and &quot;FAR: Lone Sails&quot; by Okomotive.&lt;/tw-passage&gt;</tw-passagedata><tw-passagedata pid="2" name="Start" tags="" position="1050,800" size="100,100">You finally reach the lone trading outpost just as the sky begins to darken. You descend from your speeder and head for the back of the outpost; the drifty dealer Kayne should be around there.
+
+As you look for him, you think about why you&#39;re here and how far you&#39;ve come. It has been only four weeks since you contracted the Virus in Evercrest City, said to be a vaunted safe haven. Soon enough, dark bands on your left arm and back developed, leaving you worried about what you will become when the virus has fully infected you. Since then, you have been in deep research looking for an antidote, which all points in the direction of the Orion. All you need is a keycard to it.
+
+Soon enough, you see a man in a dark red hood leaning against the wall in the dim yellow light.
 
 [[ - &quot;You must be Kayne.&quot;-&gt;Kayne Introduction]]</tw-passagedata><tw-passagedata pid="3" name="Kayne Introduction" tags="" position="1200,800" size="100,100">&quot;Damn right,&quot; he responds. &quot;Not many people know where to find me, so you must be well-informed. Anyways, what can I do for you?&quot;
 
@@ -55,70 +59,80 @@ Kayne pauses for a second.
 (set:$bombsTraded to false)
 (set:$maskerTraded to false)
 (set:$crystalsTraded to false)
-(set:$notesTraded to false)</tw-passagedata><tw-passagedata pid="5" name="Immediately Trade" tags="" position="1500,500" size="100,100">&quot;Let me see what you have,&quot; Kayne responds.
+(set:$notesTraded to false)
+(set:$KaynePresent to false)</tw-passagedata><tw-passagedata pid="5" name="Immediately Trade" tags="" position="1500,500" size="100,100">&quot;Let me see what you have,&quot; Kayne responds.
 
-You cannot wait any longer. As you reach for your backpack, you feel the dark bands on your left arm and back, reminders of the virus you contracted four weeks ago. You do not know what you will become when the virus has fully infected you, but with your field expertise and research, you know the Orion has a cure.
-
-You open your backpack and take note of what is worth trading: three sticky bombs, a scent masker, and a sack of quartz crystals.
+You cannot wait any longer. You open your backpack and take note of what is worth trading: three sticky bombs, a scent masker, and a sack of quartz crystals.
 
 [[ - Trade sticky bombs-&gt;Trade Bombs]]
 [[ - Trade scent masker-&gt;Trade Masker]]
-[[ - Trade quartz crystals-&gt; Trade Crystals]]</tw-passagedata><tw-passagedata pid="6" name="Ask Questions" tags="" position="1500,1100" size="100,100"></tw-passagedata><tw-passagedata pid="7" name="Trade Bombs" tags="" position="2100,350" size="100,100">Kayne takes the bombs and inspects them. &quot;Gorilla-Class sticky bombs? These are quite the catch.&quot; He stores the bombs away and reaches for his pocket. &quot;Here&#39;s the keycard, as promised.&quot;
+[[ - Trade quartz crystals-&gt;Trade Crystals]]</tw-passagedata><tw-passagedata pid="6" name="Ask Questions" tags="" position="1500,1100" size="100,100">&quot;Questions, huh?&quot; Kayne lingers on your request for a bit. &quot;Well, all right. I&#39;ll let you ask two questions, and then we trade.&quot;
+
+[[ - Ask about work as a dealer-&gt;Ask About Work]]
+[[ - Ask about places traveled-&gt;Ask About Travel]]
+[[ - Ask about the Orion-&gt;Ask About Orion]]
+[[ - Ask about his tattoos-&gt;Ask About Tattoos]]
+
+(set:$workAsked to false)
+(set:$travelAsked to false)
+(set:$OrionAsked to false)
+(set:$tattoosAsked to false)
+(set:$questionsAsked to 0)</tw-passagedata><tw-passagedata pid="7" name="Trade Bombs" tags="" position="2400,350" size="100,100">Kayne takes the bombs and inspects them. &quot;Gorilla-Class sticky bombs? These are quite the catch.&quot; He stores the bombs away and reaches for his pocket. &quot;Here&#39;s the keycard, as promised.&quot;
 
 You thank Kayne as he moves into the darkness, out of sight. You return to your speeder and set a course for the Orion.
 
 [[ - Travel to the Orion-&gt;Travel to Orion Alone]]
 
-(set:$bombsTraded to true)</tw-passagedata><tw-passagedata pid="8" name="Trade Masker" tags="" position="2100,500" size="100,100">Kayne takes the scent masker and inspects it. &quot;I always appreciate a good masker.&quot; He stores the masker away and reaches for his pocket. &quot;Here&#39;s the keycard, as promised.&quot;
+(set:$bombsTraded to true)</tw-passagedata><tw-passagedata pid="8" name="Trade Masker" tags="" position="2400,500" size="100,100">Kayne takes the scent masker and inspects it. &quot;I always appreciate a good masker.&quot; He stores the masker away and reaches for his pocket. &quot;Here&#39;s the keycard, as promised.&quot;
 
 You thank Kayne as he moves into the darkness, out of sight. You return to your speeder and set a course for the Orion.
 
 [[ - Travel to the Orion-&gt;Travel to Orion Alone]]
 
-(set:$maskerTraded to true)</tw-passagedata><tw-passagedata pid="9" name=" Trade Crystals" tags="" position="2100,650" size="100,100">Kayne takes the sack and empties its contents into his hand, inspecting each crystal. &quot;I gotta say, these are mighty fine crystals.&quot; He returns the crystals to the sack and reaches for his pocket. &quot;Here&#39;s the keycard, as promised.&quot;
+(set:$maskerTraded to true)</tw-passagedata><tw-passagedata pid="9" name="Trade Crystals" tags="" position="2400,650" size="100,100">Kayne takes the sack and empties its contents into his hand, inspecting each crystal. &quot;I gotta say, these are mighty fine crystals.&quot; He returns the crystals to the sack and reaches for his pocket. &quot;Here&#39;s the keycard, as promised.&quot;
 
 You thank Kayne as he moves into the darkness, out of sight. You return to your speeder and set a course for the Orion.
 
 [[ - Travel to the Orion-&gt;Travel to Orion Alone]]
 
-(set:$crystalsTraded to true)</tw-passagedata><tw-passagedata pid="10" name="Travel to Orion Alone" tags="" position="2300,500" size="100,100">Well past nightfall, you finally arrive at the outskirts of the Orion. Aside from its wrecked state, it appears as you remembered it: a science vessel with a white hull and black underbelly, roughly eighty meters in length. Its cockpit is positioned at the bow and three engine nacelles at the stern. The vessel appears lifeless but around it, human activity seems to have developed since its crash.
+(set:$crystalsTraded to true)</tw-passagedata><tw-passagedata pid="10" name="Travel to Orion Alone" tags="" position="3000,500" size="100,100">Well past nightfall, you finally arrive at the outskirts of the Orion. Aside from its wrecked state, it appears as you remembered it: a science vessel with a white hull and black underbelly, roughly fifty meters in length. Its cockpit is positioned at the bow but its entire stern section is missing. The vessel appears lifeless but around it, human activity seems to have developed since its crash.
 
-[[ - Move closer-&gt;Move Closer]]</tw-passagedata><tw-passagedata pid="11" name="Move Closer" tags="" position="2450,500" size="100,100">As you get closer to inspect the activity, you stop cold. Just by looking at the nearby banners alone, you realize you are right outside a cultist compound. Past research reminds you that these cultists worship the virus, closely guard their territory, and are hostile to outsiders.
+[[ - Move closer-&gt;Move Closer]]</tw-passagedata><tw-passagedata pid="11" name="Move Closer" tags="" position="3150,500" size="100,100">As you get closer to inspect the activity, you stop cold. Just by looking at the nearby banners alone, you realize you are right outside a cultist compound. Past research reminds you that these cultists worship the virus and are hostile to outsiders.
 
 You park your speeder behind a thicket of large bushes and devise a plan to get past the cultists.
 
 {
 (if:$bombsTraded is false)[[[ - Use sticky bombs to cause a distraction-&gt;Cause Distraction]]&lt;br/&gt;]
 (if:$maskerTraded is false)[[[ - Mask your scent to nab clothes from a distant drying line-&gt;Nab Clothes]]&lt;br/&gt;]
-[[ - Knock out a guard and loot their clothes-&gt;Knock Out Guard]]
+[[ - Knock out a lone cultist and loot their clothes-&gt;Knock Out Guard]]
 (set:$distractionCaused to false)
 (set:$clothesNabbed to false)
 (set:$guardKnockedOut to false)
-}</tw-passagedata><tw-passagedata pid="12" name="Cause Distraction" tags="" position="2600,350" size="100,100">You figure you can put your sticky bombs to good use. After inspecting the area to be clear of guard patrols, you quickly sneak over to a nearby large storage shed. You place the bombs around the shed, set them to be remotely detonated, and return to your original spot as quickly as you came.
+}</tw-passagedata><tw-passagedata pid="12" name="Cause Distraction" tags="" position="3300,350" size="100,100">You figure you can put your sticky bombs to good use. After inspecting the area to be clear of cultists, you quickly sneak over to a nearby large storage shed. You place the bombs around the shed, set them to be remotely detonated, and return to your original spot as quickly as you came.
 
 [[ - Detonate bombs-&gt;Detonate Bombs]]
 
-(set: $distractionCaused to true)</tw-passagedata><tw-passagedata pid="13" name="Nab Clothes" tags="" position="2600,500" size="100,100">Looking at a drying line of clothes in the distance, you figure your scent masker will allow you to nab the clothes with little risk. After inspecting the area to be clear of guard patrols, you apply the masker to your body and quickly sneak over to the drying line. You pull the clothes that appear to fit the best and return to your original spot as quickly as you came.
+(set: $distractionCaused to true)</tw-passagedata><tw-passagedata pid="13" name="Nab Clothes" tags="" position="3300,500" size="100,100">Looking at a drying line of clothes in the distance, you figure your scent masker will allow you to nab the clothes with little risk. After inspecting the area to be clear of cultists, you apply the masker to your body and quickly sneak over to the drying line. You pull the clothes that appear to fit the best and return to your original spot as quickly as you came.
 
 [[ - Change clothes-&gt;Change Clothes]]
 
-(set:$clothesNabbed to true)</tw-passagedata><tw-passagedata pid="14" name="Detonate Bombs" tags="" position="2750,350" size="100,100">You trigger the remote detonator and with a loud bang, the storage shed goes up in flame. Soon enough, you observe cultists running toward the explosion. It appears that a path toward the Orion&#39;s entrance is clear.
+(set:$clothesNabbed to true)</tw-passagedata><tw-passagedata pid="14" name="Detonate Bombs" tags="" position="3450,350" size="100,100">You trigger the remote detonator and with a loud bang, the storage shed goes up in flame. Soon enough, you observe cultists running toward the explosions. It appears that a path toward the Orion&#39;s entrance is clear.
 
-[[ - Head to the Orion&#39;s entrance-&gt;Head to Orion Entrance]]</tw-passagedata><tw-passagedata pid="15" name="Head to Orion Entrance" tags="" position="2900,500" size="100,100">You enter a temple in front of the Orion&#39;s entrance. Luckily, no one is around. You make your way to the back of the temple, where a pair of ship doors stand in all their glory. You take out your keycard and hold it to the card reader. A moment later, the doors slide open with a soft hiss.
+[[ - Head to the Orion&#39;s entrance-&gt;Head to Orion Entrance]]</tw-passagedata><tw-passagedata pid="15" name="Head to Orion Entrance" tags="" position="3600,500" size="100,100">You enter a temple in front of the Orion&#39;s entrance. Luckily, no one is around. You make your way to the back of the temple, where a pair of ship doors stand in all their glory. You take out your keycard and hold it to the card reader. A moment later, the doors slide open with a soft hiss.
 
-[[ - Enter the Orion-&gt;Enter Orion]]</tw-passagedata><tw-passagedata pid="16" name="Knock Out Guard" tags="" position="2600,650" size="100,100">Thinking of the guard patrols, you instinctively reach for your energy pistol. You do not want to kill anyone but you figure you can knock out a guard with it. After inspecting the area to be clear of guard patrols, you quickly sneak over to a stack of crates to hide behind. Roughly two minutes later, you hear a lone guard coming. Just as they pass you, you draw your pistol and strike them over the head with its butt, knocking them unconscious.
+[[ - Enter the Orion-&gt;Enter Orion]]</tw-passagedata><tw-passagedata pid="16" name="Knock Out Guard" tags="" position="3300,650" size="100,100">Thinking of cultist hostility, you instinctively reach for your energy pistol. You do not want to kill anyone but you figure you can knock out someone with it. After inspecting the area to be clear of cultists, you quickly sneak over to a stack of crates to hide behind. Roughly two minutes later, you hear a lone cultist coming. Just as they pass you, you draw your pistol and strike them over the head with its butt, knocking them unconscious.
 
 [[ - Loot clothes-&gt;Loot Clothes]]
 
-(set:$guardKnockedOut to true)</tw-passagedata><tw-passagedata pid="17" name="Change Clothes" tags="" position="2750,500" size="100,100">You look like a cultist now. No one should bother you from this point on.
+(set:$guardKnockedOut to true)</tw-passagedata><tw-passagedata pid="17" name="Change Clothes" tags="" position="3450,500" size="100,100">You look like a cultist now. No one should bother you from this point on.
 
-[[ - Head to the Orion&#39;s entrance-&gt;Head to Orion Entrance]]</tw-passagedata><tw-passagedata pid="18" name="Loot Clothes" tags="" position="2750,650" size="100,100">You drag the guard&#39;s body out of sight and quickly loot their clothes. You change clothes, hoping no one would bother you from this point on.
+[[ - Head to the Orion&#39;s entrance-&gt;Head to Orion Entrance]]</tw-passagedata><tw-passagedata pid="18" name="Loot Clothes" tags="" position="3450,650" size="100,100">You drag the cultist&#39;s body out of sight and quickly loot their clothes. You change clothes, hoping no one would bother you from this point on.
 
-[[ - Head to the Orion&#39;s entrance-&gt;Head to Orion Entrance]]</tw-passagedata><tw-passagedata pid="19" name="Enter Orion" tags="" position="3050,500" size="100,100">Inside the Orion, you enter a common room that branches off into different directions. A ship directory on the wall presents the room layout of the Orion. A few rooms pique your interest.
+[[ - Head to the Orion&#39;s entrance-&gt;Head to Orion Entrance]]</tw-passagedata><tw-passagedata pid="19" name="Enter Orion" tags="" position="3750,800" size="100,100">Inside the Orion, you {(if:$KaynePresent is true)[and Kayne]} enter a common room that branches off into different directions. A ship directory on the wall presents the room layout of the Orion. A few rooms pique your interest.
 
 [[ - Go to the captain&#39;s quarters-&gt;Go to Captain&#39;s Quarters]]
-[[ - Go to the crew&#39;s quarters-&gt;Go to Crew&#39;s Quarters]]
-[[ - Go to the rift lab-&gt;Go to Rift Lab]]
+[[ - Go to the scientists&#39; quarters-&gt;Go to Crew&#39;s Quarters]]
+[[ - Go to the rift research lab-&gt;Go to Rift Lab]]
 [[ - Go to the virus lab-&gt;Go to Virus Lab]]
 
 (set:$captainQuartersVisited to false)
@@ -128,98 +142,343 @@ You park your speeder behind a thicket of large bushes and devise a plan to get 
 
 (set:$captainKeyFound to false)
 (set:$virusKeyFound to false)
-</tw-passagedata><tw-passagedata pid="20" name="Go to Captain&#39;s Quarters" tags="" position="3200,350" size="100,100">{
-(if:$captainKeyFound is false)[You try the door to the captain&#39;s quarters but it is locked shut.&lt;br/&gt;&lt;br/&gt;]
-(else-if:$captainKeyFound is true)[Using the captain&#39;s keycard, you open the door to the quarters. Inside there is a nice bed, a dresser, and a desk with a bulletin above it. You inspect the bulletin and notice a list of codes, including one to a safe in the virus lab. You take the list of codes.&lt;br/&gt;&lt;br/&gt;]
 
-[[ - Return to the common room-&gt;Return to Common Room]]
+(set:$room1Visited to false)
+(set:$room2Visited to false)
+(set:$room3Visited to false)
+(set:$room4Visited to false)
+(set:$room5Visited to false)
+(set:$room6Visited to false)
+(set:$room7Visited to false)
+(set:$room8Visited to false)
 
-(if:$captainKeyFound is true)
+(set:$bedInspected to false)
+(set:$dresserInspected to false)
+(set:$deskInspected to false)
+
+(set:$computersInspected to false)
+(set:$droneInspected to false)
+(set:$prototypeInspected to false)</tw-passagedata><tw-passagedata pid="20" name="Go to Captain&#39;s Quarters" tags="" position="3950,650" size="100,100">{
+(if:$captainKeyFound is false)
 	[
-    (set:$virusKeyFound to true)
-    (set:$captainQuartersVisited to true)
+    You try the door to the captain&#39;s quarters but it is locked shut.&lt;br/&gt;&lt;br/&gt;
+    
+    [[ - Return to the common room-&gt;Return to Common Room]]
     ]
-}</tw-passagedata><tw-passagedata pid="21" name="Go to Crew&#39;s Quarters" tags="" position="3350,350" size="100,100">Inside the crew&#39;s quarters are a series of smaller rooms with two beds each. You quickly inspect each room and in one, you find a keycard to the captain&#39;s quarters. How curious.
+(else-if:$captainKeyFound is true)
+	[
+    Using the captain&#39;s keycard, you open the door to the quarters. Inside there is a nice bed, a dresser, and a desk with a bulletin above it.&lt;br/&gt;&lt;br/&gt;
+    
+    [[ - Inspect the bed-&gt;Inspect Bed]]&lt;br/&gt;
+    [[ - Inspect the dresser-&gt;Inspect Dresser]]&lt;br/&gt;
+    [[ - Inspect the desk and bulletin-&gt;Inspect Desk]]&lt;br/&gt;
+    ]
+}</tw-passagedata><tw-passagedata pid="21" name="Go to Crew&#39;s Quarters" tags="" position="4275,650" size="100,100">Inside the scientists&#39; quarters are a series of eight smaller rooms adjoined by a hallway.
 
-[[ - Return to the common room-&gt;Return to Common Room]]
+[[ - Inspect Room 1-&gt;Go to Room 1]]
+[[ - Inspect Room 2-&gt;Go to Room 2]]
+[[ - Inspect Room 3-&gt;Go to Room 3]]
+[[ - Inspect Room 4-&gt;Go to Room 4]]
+[[ - Inspect Room 5-&gt;Go to Room 5]]
+[[ - Inspect Room 6-&gt;Go to Room 6]]
+[[ - Inspect Room 7-&gt;Go to Room 7]]
+[[ - Inspect Room 8-&gt;Go to Room 8]]</tw-passagedata><tw-passagedata pid="22" name="Go to Rift Lab" tags="" position="3950,950" size="100,100">Inside the rift research lab, you see machinery and equipment far beyond your comprehension. After all, much of this work was and remains strictly confidential, especially since it led to the current state of the world. However, there are still things to further inspect.
 
-(set:$captainKeyFound to true)
-(set:$crewQuartersVisited to true)</tw-passagedata><tw-passagedata pid="22" name="Go to Rift Lab" tags="" position="3200,650" size="100,100">Inside the rift lab, you see machinery and equipment far beyond your comprehension, After all, much of this work was and remains strictly confidential, especially since it led to the current state of the world. Looking around, however, you do not find anything immediately useful.
-
-[[ - Return to the common room-&gt;Return to Common Room]]
-
-(set:$riftLabVisited to true)</tw-passagedata><tw-passagedata pid="23" name="Go to Virus Lab" tags="" position="3350,650" size="100,100">{
+[[ - Inspect the computer array-&gt;Inspect Computer Array]]
+[[ - Inspect a drone-&gt;Inspect Drone]]
+[[ - Inspect the rift gate prototype-&gt;Inspect Prototype]]</tw-passagedata><tw-passagedata pid="23" name="Go to Virus Lab" tags="" position="4350,950" size="100,100">{
 (if:$virusLabVisited is false)[Inside the virus lab, you see various microscopes and flasks strewn about on tables. Further in, you see glass lockers filled with a variety of microorganism samples. At the back of the lab is a high-security safe that requires a code to unlock.&lt;br/&gt;&lt;br/&gt;]
 (else-if:$virusLabVisited is true)[You reenter the virus lab.&lt;br/&gt;&lt;br/&gt;]
 
 (if:$virusKeyFound is false)[[[ - Return to the common room-&gt;Return to Common Room]]&lt;br/&gt;]
-(else-if:$virusKeyFound is true)[[[ - Unlock the safe-&gt;Unlock Safe]]]
+(else-if:$virusKeyFound and ($KaynePresent is false))[[[ - Unlock the safe-&gt;Unlock Safe]]]
+(else-if:$virusKeyFound and $KaynePresent)[[[ - Unlock the safe-&gt;Unlock Safe With Kayne]]]
 
 (set:$virusLabVisited to true)
-}</tw-passagedata><tw-passagedata pid="24" name="Return to Common Room" tags="" position="3275,500" size="100,100">You reenter the common room.
+}</tw-passagedata><tw-passagedata pid="24" name="Return to Common Room" tags="" position="4150,800" size="100,100">You reenter the common room.
 
 {
 (if:$captainQuartersVisited is false)[[[ - Go to the captain&#39;s quarters-&gt;Go to Captain&#39;s Quarters]]&lt;br/&gt;]
 (if:$crewQuartersVisited is false)[[[ - Go to the crew&#39;s quarters-&gt;Go to Crew&#39;s Quarters]]&lt;br/&gt;]
 (if:$riftLabVisited is false)[[[ - Go to the rift lab-&gt;Go to Rift Lab]]&lt;br/&gt;]
 [[ - Go to the virus lab-&gt;Go to Virus Lab]]
-}</tw-passagedata><tw-passagedata pid="25" name="Unlock Safe" tags="" position="3500,500" size="100,100">Using the code you found in the captain&#39;s quarters, you unlock the safe. Inside, you find a set of antidote injectables with a label indicating its purpose: to cure those infected with the virus. You breath a sigh of relief as you take the antidote.
+}</tw-passagedata><tw-passagedata pid="25" name="Unlock Safe" tags="" position="4550,800" size="100,100">Using the code you found in the captain&#39;s quarters, you unlock the safe. Inside, you find a set of antidote injectables with a label indicating its purpose: to cure those infected with the virus. You breath a sigh of relief as you take the antidote.
 
-[[ - Leave the Orion-&gt;Leave Orion]]</tw-passagedata><tw-passagedata pid="26" name="Leave Orion" tags="" position="3650,500" size="100,100">After returning to the common room, you exit the Orion and the adjoining cultist temple. All that is left to do is escape the compound.
+[[ - Leave the Orion-&gt;Leave Orion]]</tw-passagedata><tw-passagedata pid="26" name="Leave Orion" tags="" position="4850,500" size="100,100">After returning to the common room, you exit the Orion and the adjoining cultist temple. All that is left to do is escape the compound.
 
 {
 (if:$distractionCaused is true)[[[ - Leave the compound-&gt;Encounter Little Boy]]&lt;br/&gt;]
 (else-if:$clothesNabbed is true)[[[ - Leave the compound-&gt;No Encounter]]&lt;br/&gt;]
 (else-if:$guardKnockedOut is true)[[[ - Leave the compound-&gt;Encounter Young Girl]]&lt;br/&gt;]
-}</tw-passagedata><tw-passagedata pid="27" name="Encounter Little Boy" tags="" position="3800,200" size="100,100">About twenty meters away from the exit, a little boy crosses your path and the two of you stop cold. The boy breaks the brief silence: &quot;You don&#39;t look like one of us.&quot;
+}</tw-passagedata><tw-passagedata pid="27" name="Encounter Little Boy" tags="" position="5000,200" size="100,100">About twenty meters away from the exit, a little boy crosses your path, seemingly heading in the direction of the explosions, and the two of you stop cold. The boy breaks the brief silence: &quot;You don&#39;t look like one of us.&quot;
 
-[[ - &quot;You&#39;re right, I guess.&quot;-&gt;Converse With Boy]]</tw-passagedata><tw-passagedata pid="28" name="Encounter Young Girl" tags="" position="3800,800" size="100,100">&quot;Hey.&quot;
+[[ - &quot;You&#39;re right, I guess.&quot;-&gt;Converse With Boy]]</tw-passagedata><tw-passagedata pid="28" name="Encounter Young Girl" tags="" position="5000,800" size="100,100">&quot;Hey.&quot;
 
-Ten meters out from the temple, a voice calls out to you. To your left, a young girl emerges from the darkness.
+Ten meters out from the temple, a voice calls out to you. To your left, a teenage girl emerges from the darkness.
 
-[[ - &quot;Yes?&quot;-&gt;Converse With Girl]]</tw-passagedata><tw-passagedata pid="29" name="No Encounter" tags="" position="3800,500" size="100,100">Within a few minutes, you walk through the exit and return to your speeder. Here, you quickly change back into your familiar clothes.
+[[ - &quot;Yes?&quot;-&gt;Converse With Girl]]</tw-passagedata><tw-passagedata pid="29" name="No Encounter" tags="" position="5000,500" size="100,100">Within a few minutes, you walk through the exit and return to your speeder. Here, you quickly change back into your familiar clothes.
 
-[[ - Leave-&gt;Leave with Antidote]]</tw-passagedata><tw-passagedata pid="30" name="Leave with Antidote" tags="Good-Ending" position="4400,500" size="100,100">You hop on your speeder and leave. Relief washes over you, now that you have the antidote securely in your possession.
+[[ - Leave-&gt;Leave with Antidote]]</tw-passagedata><tw-passagedata pid="30" name="Leave with Antidote" tags="Good-Ending" position="5600,500" size="100,100">You hop on your speeder and leave. Relief washes over you, now that you have the antidote securely in your possession.
 
-[[ - Return to Title-&gt;Title]]</tw-passagedata><tw-passagedata pid="31" name="Converse With Girl" tags="" position="3950,800" size="100,100">&quot;I can tell you&#39;re not from around here, even with those guard clothes on you,&quot; the girl responds. &quot;I can have you arrested, you know?&quot;
+[[ - Return to Title-&gt;Title]]</tw-passagedata><tw-passagedata pid="31" name="Converse With Girl" tags="" position="5150,800" size="100,100">&quot;I can tell you&#39;re not from around here, even with those clothes on you,&quot; the girl responds. &quot;Besides, I saw you knock out one of us. I can have you arrested, you know?&quot;
 
 {
 (if:$crystalsTraded is false)[[[Offer quartz crystals-&gt;Bribe with Crystals]]&lt;br/&gt;]
 [[Tell the truth-&gt;Tell Truth]]&lt;br/&gt;
 [[Tell a lie-&gt;Tell Lie]]
-}</tw-passagedata><tw-passagedata pid="32" name="Converse With Boy" tags="" position="3950,200" size="100,100">&quot;We don&#39;t like people like you. I&#39;ll tell on you!&quot; the boys says. &quot;Unless you have something for me to play with, maybe...&quot;
+}</tw-passagedata><tw-passagedata pid="32" name="Converse With Boy" tags="" position="5150,200" size="100,100">&quot;We don&#39;t like people like you. I&#39;ll tell on you!&quot; the boys says. &quot;Unless you have something for me to play with, maybe...&quot;
 
 {
 (if:$maskerTraded is false)[[[ - &quot;Maybe you could play with this scent masker?&quot;-&gt;Give Masker]]&lt;br/&gt;]
 (if:$crystalsTraded is false)[[[ - &quot;Perhaps these quartz crystals can be played with?&quot;-&gt;Give Crystals]]&lt;br/&gt;]
 [[ - &quot;It&#39;s not nice to snitch. Let&#39;s pretend we never met?&quot;-&gt;Try to Reason]]
-}</tw-passagedata><tw-passagedata pid="33" name="Give Masker" tags="" position="4100,200" size="100,100">You hand the scent masker to the boy. As he inspects it, he presses the cap and sprays himself in the face. &quot;Ahhhh! This is icky!&quot; he screams. &quot;GUARDS! GUARDS!&quot;
+}</tw-passagedata><tw-passagedata pid="33" name="Give Masker" tags="" position="5300,200" size="100,100">You hand the scent masker to the boy. As he inspects it, he presses the cap and sprays himself in the face. &quot;Ahhhh! This is icky!&quot; he screams. &quot;INTRUDER! INTRUDER!&quot;
 
-[[ - Run-&gt;Get Knocked Out]]</tw-passagedata><tw-passagedata pid="34" name="Give Crystals" tags="" position="4100,350" size="100,100">You hand the sack of crystals to the boy. He opens the sack and inspects its contents, his eyes widening with joy. Then all of a sudden, he runs away without a word.
+[[ - Run-&gt;Get Knocked Out]]</tw-passagedata><tw-passagedata pid="34" name="Give Crystals" tags="" position="5300,350" size="100,100">You hand the sack of crystals to the boy. He opens the sack and inspects its contents, his eyes widening with joy. Then all of a sudden, he runs away without a word.
 
-[[ - Leave quickly-&gt;Leave Quickly]]</tw-passagedata><tw-passagedata pid="35" name="Try to Reason" tags="" position="4100,50" size="100,100">&quot;Well mommy and daddy taught me to tell, so I must,&quot; he responds. &quot;GUARDS! GUARDS!&quot;
+[[ - Leave quickly-&gt;Leave Quickly]]</tw-passagedata><tw-passagedata pid="35" name="Try to Reason" tags="" position="5300,50" size="100,100">&quot;Well mommy and daddy taught me to tell, so I must,&quot; he responds. &quot;INTRUDER! INTRUDER!&quot;
 
-[[ - Run-&gt;Get Knocked Out]]</tw-passagedata><tw-passagedata pid="36" name="Get Knocked Out" tags="Bad-Ending" position="4400,200" size="100,100">You break into a run for the exit, but soon, three guards appear out of the darkness. The last thing you remember is falling flat on your face.
+[[ - Run-&gt;Get Knocked Out]]</tw-passagedata><tw-passagedata pid="36" name="Get Knocked Out" tags="Bad-Ending" position="5600,200" size="100,100">You break into a run for the exit, but soon, three cultists appear out of the darkness. The last thing you remember is falling flat on your face.
 
-[[ - Return to Title-&gt;Title]]</tw-passagedata><tw-passagedata pid="37" name="Leave Quickly" tags="" position="4250,350" size="100,100">You walk quickly to the exit and return to the speeder, taking a moment to catch your breath from the encounter.
+[[ - Return to Title-&gt;Title]]</tw-passagedata><tw-passagedata pid="37" name="Leave Quickly" tags="" position="5450,350" size="100,100">You walk quickly to the exit and return to the speeder, taking a moment to catch your breath from the encounter.
 
-[[ - Leave-&gt;Leave with Antidote]]</tw-passagedata><tw-passagedata pid="38" name="Bribe with Crystals" tags="" position="4100,950" size="100,100">&quot;Well, you caught me, but can you pretend all this never happend? I&#39;ll give you this sack of crystals if you stay quiet,&quot; you say.
+[[ - Leave-&gt;Leave with Antidote]]</tw-passagedata><tw-passagedata pid="38" name="Bribe with Crystals" tags="" position="5300,950" size="100,100">&quot;Well, you caught me, but can you pretend all this never happend? I&#39;ll give you this sack of crystals if you stay quiet,&quot; you say.
 
 &quot;That&#39;s bribery,&quot; she responds. &quot;I will have you arrested for that!&quot;
 
-[[ - &quot;Perhaps we could reach a...&quot;-&gt;Get Tased]]</tw-passagedata><tw-passagedata pid="39" name="Tell Truth" tags="" position="4100,650" size="100,100">&quot;All right. I&#39;m here because I&#39;m looking for a cure to what I&#39;m infected with,&quot; you say as you begin rolling up your left sleeve. &quot;See these dark bands? These mean the virus is working through my body, and I don&#39;t want to know what happens when the virus has fully infected me.&quot;
+[[ - &quot;Perhaps we could reach a...&quot;-&gt;Get Tased]]</tw-passagedata><tw-passagedata pid="39" name="Tell Truth" tags="" position="5300,650" size="100,100">&quot;All right. I&#39;m here because I&#39;m looking for a cure to what I&#39;m infected with,&quot; you say as you begin rolling up your left sleeve. &quot;See these dark bands? These mean the Virus is working through my body, and I don&#39;t want to know what happens when the Virus has fully infected me.&quot;
 
-&quot;I understand,&quot; the girl responds. &quot;To be honest, I don&#39;t like what happens to infected people in the compound. It&#39;s just not fair. Now go, go before anyone sees us.&quot;
+&quot;I understand,&quot; the girl responds. &quot;To be honest, I don&#39;t like what happens to infected people in the compound. To be devoted to God is one thing, but to sacrifice human beings infected with the Virus to God is excessive. It&#39;s just not fair. Now go, go before anyone sees us.&quot;
 
-[[Leave quickly-&gt;Leave Quickly 2]]</tw-passagedata><tw-passagedata pid="40" name="Tell Lie" tags="" position="4100,800" size="100,100">&quot;Perhaps you don&#39;t recognize me because I&#39;m new here,&quot; you say. &quot;I just finished my training and I&#39;m about to go on patrol.&quot;
+[[Leave quickly-&gt;Leave Quickly 2]]</tw-passagedata><tw-passagedata pid="40" name="Tell Lie" tags="" position="5300,800" size="100,100">&quot;I don&#39;t know what you&#39;re talking about,&quot; you say. &quot;I&#39;m just a guy who likes to take walks at night. Who you saw knock out a cultist was probably just a common wasteland vagabond.&quot;
 
 &quot;I don&#39;t believe you one bit,&quot; she responds. &quot;I will have you arrested for that!&quot;
 
-[[ - &quot;Hey, don&#39;t talk like...&quot;-&gt;Get Tased]]</tw-passagedata><tw-passagedata pid="41" name="Get Tased" tags="Bad-Ending" position="4400,800" size="100,100">Before you can finish your sentence, the girl whips out a power taser and knocks you off your feet. The last thing you remember is seeing a few guards appear over you.
+[[ - &quot;Hey, don&#39;t talk like...&quot;-&gt;Get Tased]]</tw-passagedata><tw-passagedata pid="41" name="Get Tased" tags="Bad-Ending" position="5600,800" size="100,100">Before you can finish your sentence, the girl whips out a power taser and knocks you off your feet. The last thing you remember is seeing a few cultists appear over you.
 
-[[ - Return to Title-&gt;Title]]</tw-passagedata><tw-passagedata pid="42" name="Leave Quickly 2" tags="" position="4250,650" size="100,100">You thank the girl, walk quickly to the exit, and return to the speeder, taking a moment to catch your breath from the encounter.
+[[ - Return to Title-&gt;Title]]</tw-passagedata><tw-passagedata pid="42" name="Leave Quickly 2" tags="" position="5450,650" size="100,100">You thank the girl, walk quickly to the exit, and return to the speeder, taking a moment to catch your breath from the encounter.
 
-[[ - Leave-&gt;Leave with Antidote]]</tw-passagedata></tw-storydata>
+[[ - Leave-&gt;Leave with Antidote]]</tw-passagedata><tw-passagedata pid="43" name="Ask About Work" tags="" position="1650,900" size="100,100">&quot;Well, dealers like me are pretty much like any other merchant, except our line of work is a little more...shall we say...under the radar,&quot; Kayne answers. &quot;Unlike established merchants, we trade away whatever we can and we acquire whatever we can, regardless of how common, legitimate, or legal the goods are. As such, we can&#39;t stay in one place for too long. Otherwise, people will get suspicious and we will get more attention than we want.&quot;
+
+[[ - &quot;Sounds like getting the keycard took a lot of effort.&quot;-&gt;Ask About Work Pt 2]]</tw-passagedata><tw-passagedata pid="44" name="Ask About Travel" tags="" position="1650,1300" size="100,100">&quot;Travel? Oh yeah, I&#39;ve traveled a lot,&quot; Kayne answers. &quot;This wasteland is vast, so there&#39;s a lot to see, even after the incident all those years ago. I&#39;ve been to all sorts of places: many trading outposts like this one, scrapper camps, old launch stations, you name it. I&#39;ve even been to the few utopian cities in the world. They were such safe havens compared to everything else.&quot;
+
+[[ - &quot;Evercrest City included?&quot;-&gt;Ask About Travel Pt 2]]</tw-passagedata><tw-passagedata pid="45" name="Ask About Orion" tags="" position="1950,950" size="100,100">&quot;I was wondering if you were going to ask be about the Orion itself, considering you&#39;re here for the keycard,&quot; Kayne answers. &quot;Truth be told, I&#39;ve actually never seen the Orion with my own eyes. I don&#39;t even know where the vessel truly is or what it looks like. What I do know about it comes from rumors. I&#39;ve heard that it contains a possible antidote to the Virus, that it carries machinery for super secret rift experiments, and that it is worshipped by cultists. Kinda wild, if you ask me.&quot;
+
+[[ - &quot;Seems like you have interest in the Orion.&quot;-&gt;Ask About Orion Pt 2]]</tw-passagedata><tw-passagedata pid="46" name="Ask About Tattoos" tags="" position="1950,1250" size="100,100">&quot;Tattoos?&quot; Kayne asks, initially confused, but then notices the barely visible red marks on his right arm.
+
+&quot;Oh, these,&quot; he responds. &quot;They are much worse on my left leg.&quot; Kayne rolls up his left pant leg to reveal lightning-like dark red marks that pulsate on occasion. &quot;I&#39;ve had these for a few weeks now and they&#39;re not getting any better. They&#39;re what happens when you get infected with the Virus, you know.&quot;
+
+[[ - &quot;I&#39;ve got similar marks too.&quot;-&gt;Ask About Tattoos Pt 2]]</tw-passagedata><tw-passagedata pid="47" name="Ask About Work Pt 2" tags="" position="1800,900" size="100,100">&quot;You bet,&quot; Kayne responds. &quot;I traded quite a bit away to get ahold of it, because I was interested in the Orion at the time. Ironically, my interest faded over time, considering my line of work, so the Orion is nothing more than a fable to me now.&quot;
+
+{
+(set:$workAsked to true)
+(set:$questionsAsked to $questionsAsked + 1)
+(if:$questionsAsked is 1)[[[ - &quot;I see.&quot;-&gt;Ask Second Question]]]
+(else:)[[[ - &quot;I see.&quot;-&gt;Go To Trade]]]
+}</tw-passagedata><tw-passagedata pid="48" name="Ask Second Question" tags="" position="1875,1100" size="100,100">You prepare to ask the second question.
+
+{
+(if:$workAsked is false)[[[ - Ask about work as a dealer-&gt;Ask About Work]]&lt;br/&gt;]
+(if:$travelAsked is false)[[[ - Ask about places traveled-&gt;Ask About Travel]]&lt;br/&gt;]
+(if:$OrionAsked is false)[[[ - Ask about the Orion-&gt;Ask About Orion]]&lt;br/&gt;]
+(if:$tattoosAsked is false)[[[ - Ask about his &quot;tattoos&quot;-&gt;Ask About Tattoos]]&lt;br/&gt;]
+}</tw-passagedata><tw-passagedata pid="49" name="Go To Trade" tags="" position="2250,1100" size="100,100">&quot;All right,&quot; Kayne says. &quot;Let me see what your have.&quot;
+
+You open your backpack and take note of what is worth trading: three sticky bombs, a scent masker, and a sack of quartz crystals. {(if:$OrionAsked and $tattoosAsked)[However, based on Kanye&#39;s answers to your questions, perhaps your research notes might be worth showing.]}
+
+[[ - Trade sticky bombs-&gt;Trade Bombs]]
+[[ - Trade scent masker-&gt;Trade Masker]]
+[[ - Trade quartz crystals-&gt;Trade Crystals]]
+{
+(if:$OrionAsked and $tattoosAsked)[[[ - Show research notes-&gt;Show Research Notes]]]
+}</tw-passagedata><tw-passagedata pid="50" name="Ask About Travel Pt 2" tags="" position="1800,1300" size="100,100">&quot;Yep,&quot; Kayne responds. &quot;It&#39;s amazing how much progress the city has made over the years. It&#39;s doing pretty well at trying to keep the Virus out, and when it doesn&#39;t, some remarkable things have resulted. Last time I was there, I saw some girl with arachnid powers take on a whole gang of bank robbers.&quot;
+
+{
+(set:$travelAsked to true)
+(set:$questionsAsked to $questionsAsked + 1)
+(if:$questionsAsked is 1)[[[ - &quot;Impressive.&quot;-&gt;Ask Second Question]]]
+(else:)[[[ - &quot;Impressive.&quot;-&gt;Go To Trade]]]
+}</tw-passagedata><tw-passagedata pid="51" name="Ask About Orion Pt 2" tags="" position="2100,950" size="100,100">&quot;You think so?&quot; Kayne responds. &quot;When I did get ahold of the keycard, I was interested, but my focus on dealing has caused me to lose interest. I guess there&#39;s a part of me that&#39;s clinging onto some hope that the Orion is within reach and that it has some answer of fixing this world. But until then, I will continue to consider it as a fable.&quot;
+
+{
+(set:$OrionAsked to true)
+(set:$questionsAsked to $questionsAsked + 1)
+(if:$questionsAsked is 1)[[[ - &quot;I understand.&quot;-&gt;Ask Second Question]]]
+(else:)[[[ - &quot;I understand.&quot;-&gt;Go To Trade]]]
+}</tw-passagedata><tw-passagedata pid="52" name="Ask About Tattoos Pt 2" tags="" position="2100,1250" size="100,100">You roll up your left sleeve to show the dark bands on your arm. &quot;Holy cow,&quot; Kayne responds. &quot;I&#39;m hoping something good comes out of me giving this keycard to you. The existence of a possible antidote aboard the Orion may be just a rumor, but a part of me wants me to believe that it&#39;s true.&quot;
+
+{
+(set:$tattoosAsked to true)
+(set:$questionsAsked to $questionsAsked + 1)
+(if:$questionsAsked is 1)[[[ - &quot;I hope for the best too.&quot;-&gt;Ask Second Question]]]
+(else:)[[[ - &quot;I hope for the best too.&quot;-&gt;Go To Trade]]]
+}</tw-passagedata><tw-passagedata pid="53" name="Show Research Notes" tags="" position="2400,1100" size="100,100">&quot;I think you might want to take a look at these,&quot; you say as you hand Kayne your research notes. Kayne begins reading and as he progresses, he begins to swich between pages more and more frequently, as if he is intent on deciphering your findings. After some time, he finally speaks.
+
+&quot;So you&#39;re telling me that the existence of an antidote aboard the Orion isn&#39;t a rumor, and is actually a fact?&quot;
+
+[[ - Explain your findings-&gt;Explain Notes]]</tw-passagedata><tw-passagedata pid="54" name="Explain Notes" tags="" position="2550,1100" size="100,100">&quot;That&#39;s correct,&quot; you say. &quot;As we both know, the Orion served as a science vessel to conduct rift experiments so humans can travel across large distances of space instantaneously. Of course, we also know how badly that went. However, most people don&#39;t know that the Orion had a dedicated team to study viruses, which makes sense considering all the press coverage rift technology got all those years ago. Nonetheless, scientists feared getting exposed to alien viruses when conducting rift experiments, or really doing anything out in space, so alas, the Orion had virus research happening at the same time.&quot;
+
+[[ - Finish explaining-&gt;Finish Explaining]]</tw-passagedata><tw-passagedata pid="55" name="Finish Explaining" tags="" position="2700,1100" size="100,100">&quot;The point is,&quot; you conclude, &quot;scientists had discovered the Virus that plagues our world now, and developed an antidote for it in case things went wrong. That&#39;s why I&#39;m heading to the Orion. The cure is real.&quot;
+
+&quot;Holy cow,&quot; Kayne responds. &quot;If what you say is true, then I want to see all this for myself. I&#39;m coming with you.&quot;
+
+[[ - &quot;All right.&quot;-&gt;Leave With Kayne]]</tw-passagedata><tw-passagedata pid="56" name="Leave With Kayne" tags="" position="2850,1100" size="100,100">&quot;Thanks for letting me come,&quot; Kayne says. &quot;I assume you know the way?&quot;
+
+&quot;I certainly do,&quot; you respond.
+
+You return to your speeder and set a course for the Orion. Kayne returns to his speeder and follows you from behind.
+
+[[ - Travel to the Orion-&gt;Travel to Orion With Kayne]]
+
+(set:$KaynePresent to true)</tw-passagedata><tw-passagedata pid="57" name="Travel to Orion With Kayne" tags="" position="3000,1100" size="100,100">Well past nightfall, you and Kayne finally arrive at the outskirts of the Orion. Aside from its wrecked state, it appears as you remembered it: a science vessel with a white hull and black underbelly, roughly fifty meters in length. Its cockpit is positioned at the bow but its entire stern section is missing. The vessel appears lifeless but around it, human activity seems to have developed since its crash.
+
+[[ - Move closer-&gt;Move Closer With Kayne]]</tw-passagedata><tw-passagedata pid="58" name="Move Closer With Kayne" tags="" position="3150,1100" size="100,100">As you and Kayne get closer to inspect the activity, you both stop cold. Just by looking at the nearby banners alone, you realize you are right outside a cultist compound. Past research reminds you that these cultists worship the virus and are hostile to outsiders.
+
+You and Kayne park your speeders behind a thicket of large bushes and devise a plan to get past the cultists.
+
+[[ - &quot;How should we get past them?&quot;-&gt;Receive Clothes]]</tw-passagedata><tw-passagedata pid="59" name="Receive Clothes" tags="" position="3300,1100" size="100,100">&quot;How interesting,&quot; Kayne responds. &quot;I may have never been here before, but I recognize these cultists.&quot;
+
+Kayne opens his backpack and pulls out two sets of cultist clothes. &quot;A while ago, another dealer traded me two sets of these clothes. How convenient that they are the same kind these cultists wear.&quot;
+
+[[ - &quot;How about that?&quot;-&gt;Change Clothes With Kayne]]</tw-passagedata><tw-passagedata pid="60" name="Change Clothes With Kayne" tags="" position="3450,1100" size="100,100">&quot;Yeah, how about that?&quot; Kayne responds.
+
+You and Kayne change into the cultist clothes. No one should bother the two of you from this point on.
+
+[[ - Head to the Orion&#39;s entrance-&gt;Head to Orion Entrance With Kayne]]</tw-passagedata><tw-passagedata pid="61" name="Head to Orion Entrance With Kayne" tags="" position="3600,1100" size="100,100">You and Kanye enter a temple in front of the Orion&#39;s entrance. Luckily, no one is around. You both make your way to the back of the temple, where a pair of ship doors stand in all their glory. You take out your keycard and hold it to the card reader. A moment later, the doors slide open with a soft hiss.
+
+[[ - Enter the Orion-&gt;Enter Orion]]</tw-passagedata><tw-passagedata pid="62" name="Go to Room 1" tags="" position="4275,500" size="100,100">Inside Room 1 there are two beds and two desks, but otherwise the room is empty.
+
+[[ - Leave-&gt;Return to Crew&#39;s Quarters]]
+
+(set:$room1Visited to true)</tw-passagedata><tw-passagedata pid="63" name="Go to Room 2" tags="" position="4425,500" size="100,100">Inside Room 2 there are two beds and two desks. On one desk are a picture of an older-looking scientist and a pile of papers with crude handwriting on them. Further inspection of the papers reveals they were authored by &quot;Willis, Head Rift Researcher&quot;. Other than these objects, there is not much else in the room.
+
+[[ - Leave-&gt;Return to Crew&#39;s Quarters]]
+
+(set:$room2Visited to true)</tw-passagedata><tw-passagedata pid="64" name="Go to Room 3" tags="" position="4275,350" size="100,100">Inside Room 3 there are two beds and two desks. On one bed sits a large teddy bear with a red ribbon around its neck. You pick up the teddy bear and read the handwriting on the ribbon: &quot;To Anna, from Mom. May you never be lonely on your journeys.&quot; You return the teddy bear and continue looking around, but there is not much else.
+
+[[ - Leave-&gt;Return to Crew&#39;s Quarters]]
+
+(set:$room3Visited to true)</tw-passagedata><tw-passagedata pid="65" name="Go to Room 4" tags="" position="4425,350" size="100,100">Inside Room 4 there are two beds and two desks. On one desk sits a container of Jell-O with a stapler inside. There is no shortage of office jokes aboard the Orion, apparently. Other than this, there is not much else in the room.
+
+[[ - Leave-&gt;Return to Crew&#39;s Quarters]]
+
+(set:$room4Visited to true)</tw-passagedata><tw-passagedata pid="66" name="Go to Room 5" tags="" position="4275,200" size="100,100">Inside Room 5 there are two beds and two desks, but otherwise the room is empty.
+
+[[ - Leave-&gt;Return to Crew&#39;s Quarters]]
+
+(set:$room5Visited to true)</tw-passagedata><tw-passagedata pid="67" name="Go to Room 6" tags="" position="4425,200" size="100,100">Inside Room 6 there are two beds and two desks. On one desk sit a model of a bacteriophage and a keycard to the captain&#39;s quarters. How curious. You take the keycard quickly.
+
+[[ - Leave-&gt;Return to Crew&#39;s Quarters]]
+
+(set:$room6Visited to true)
+(set:$captainKeyFound to true)</tw-passagedata><tw-passagedata pid="68" name="Go to Room 7" tags="" position="4275,50" size="100,100">Inside Room 7 there are two beds and two desks. On one desk sit a few books about historical infectious diseases such as the Black Death, Smallpox, and the Spanish Flu. On the other desk sits a book about COVID-19. Sadly, none of these books are going to help you find the antidote, and sadly there is nothing else in the room to see.
+
+[[ - Leave-&gt;Return to Crew&#39;s Quarters]]
+
+(set:$room7Visited to true)</tw-passagedata><tw-passagedata pid="69" name="Go to Room 8" tags="" position="4425,50" size="100,100">Inside Room 8 there are two beds and two desks, but otherwise the room is empty.
+
+[[ - Leave-&gt;Return to Crew&#39;s Quarters]]
+
+(set:$room8Visited to true)</tw-passagedata><tw-passagedata pid="70" name="Return to Crew&#39;s Quarters" tags="" position="4425,650" size="100,100">You reenter the hallway.
+
+{
+(if:$room1Visited is false)[[[ - Inspect Room 1-&gt;Go to Room 1]]&lt;br/&gt;]
+(if:$room2Visited is false)[[[ - Inspect Room 2-&gt;Go to Room 2]]&lt;br/&gt;]
+(if:$room3Visited is false)[[[ - Inspect Room 3-&gt;Go to Room 3]]&lt;br/&gt;]
+(if:$room4Visited is false)[[[ - Inspect Room 4-&gt;Go to Room 4]]&lt;br/&gt;]
+(if:$room5Visited is false)[[[ - Inspect Room 5-&gt;Go to Room 5]]&lt;br/&gt;]
+(if:$room6Visited is false)[[[ - Inspect Room 6-&gt;Go to Room 6]]&lt;br/&gt;]
+(if:$room7Visited is false)[[[ - Inspect Room 7-&gt;Go to Room 7]]&lt;br/&gt;]
+(if:$room8Visited is false)[[[ - Inspect Room 8-&gt;Go to Room 8]]&lt;br/&gt;]
+(if:$room1Visited and $room2Visited and $room3Visited and $room4Visited and $room5Visited and $room6Visited and $room7Visited and $room8Visited)
+	[
+    [[ - Return to the common room-&gt;Return to Common Room]]
+    (set:$crewQuartersVisited to true)
+    ]
+}</tw-passagedata><tw-passagedata pid="71" name="Inspect Bed" tags="" position="3875,500" size="100,100">You lift up the covers of the bed but you don&#39;t find anything of value. You also look behind the pillows but you don&#39;t find anything of value.
+
+{
+(set:$bedInspected to true)
+(if:$dresserInspected is false)[[[ - Inspect the dresser-&gt;Inspect Dresser]]&lt;br/&gt;]
+(if:$deskInspected is false)[[[ - Inspect the desk-&gt;Inspect Desk]]&lt;br/&gt;]
+(if:$bedInspected and $deskInspected and $dresserInspected)
+	[
+    [[ - Return to the common room-&gt;Return to Common Room]]
+    (set:$captainQuartersVisited to true)
+    ]
+}</tw-passagedata><tw-passagedata pid="72" name="Inspect Dresser" tags="" position="4025,500" size="100,100">You find nothing of value on top of the dresser. You then open each of the three drawers and find neatly folded clothes, but not much else.
+
+{
+(set:$dresserInspected to true)
+(if:$bedInspected is false)[[[ - Inspect the bed-&gt;Inspect Bed]]&lt;br/&gt;]
+(if:$deskInspected is false)[[[ - Inspect the desk-&gt;Inspect Desk]]&lt;br/&gt;]
+(if:$bedInspected and $deskInspected and $dresserInspected)
+	[
+    [[ - Return to the common room-&gt;Return to Common Room]]
+    (set:$captainQuartersVisited to true)
+    ]
+}</tw-passagedata><tw-passagedata pid="73" name="Inspect Desk" tags="" position="3950,350" size="100,100">On the desk sits a knocked over picture. You place it upright, revealing a photograph of an older man with thick, white muttonchops standing with his wife and two adult daughters. You then inspect the bulletin and notice a list of codes, including one to a safe in the virus lab. You take the list of codes.
+
+{
+(set:$deskInspected to true)
+(set:$virusKeyFound to true)
+(if:$bedInspected is false)[[[ - Inspect the bed-&gt;Inspect Bed]]&lt;br/&gt;]
+(if:$dresserInspected is false)[[[ - Inspect the dresser-&gt;Inspect Dresser]]&lt;br/&gt;]
+(if:$bedInspected and $deskInspected and $dresserInspected)
+	[
+    [[ - Return to the common room-&gt;Return to Common Room]]
+    (set:$captainQuartersVisited to true)
+    ]
+}</tw-passagedata><tw-passagedata pid="74" name="Inspect Computer Array" tags="" position="3875,1100" size="100,100">The computer array consists of a row of high-tech computers and monitors. However, you attempt to turn on each computer but fail.
+
+{
+(set:$computersInspected to true)
+(if:$droneInspected is false)[[[ - Inspect a drone-&gt;Inspect Drone]]&lt;br/&gt;]
+(if:$prototypeInspected is false)[[[ - Inspect the rift gate prototype-&gt;Inspect Prototype]]&lt;br/&gt;]
+(if:$computersInspected and $droneInspected and $prototypeInspected)
+	[
+    [[ - Return to the common room-&gt;Return to Common Room]]
+    (set:$riftLabVisited to true)
+    ]
+}</tw-passagedata><tw-passagedata pid="75" name="Inspect Drone" tags="" position="4025,1100" size="100,100">Upon closer inspection of a drone to your left, you count six afterburners, one on each side, as well as two flexible clawed arms on its front. This must have been a drone used to collect samples during rift experiments.
+
+{
+(set:$droneInspected to true)
+(if:$computersInspected is false)[[[ - Inspect the computer array-&gt;Inspect Computer Array]]&lt;br/&gt;]
+(if:$prototypeInspected is false)[[[ - Inspect the rift gate prototype-&gt;Inspect Prototype]]&lt;br/&gt;]
+(if:$computersInspected and $droneInspected and $prototypeInspected)
+	[
+    [[ - Return to the common room-&gt;Return to Common Room]]
+    (set:$riftLabVisited to true)
+    ]
+}</tw-passagedata><tw-passagedata pid="76" name="Inspect Prototype" tags="" position="3950,1250" size="100,100">At the center of the lab, you notice the rift gate prototype is about as tall as you are, formed into a vertical ring mounted on a pedestal connected to an advanced-looking generator. The actual rift gate must have been in a different part of the Orion, wherever that may be.
+
+{
+(set:$prototypeInspected to true)
+(if:$computersInspected is false)[[[ - Inspect the computer array-&gt;Inspect Computer Array]]&lt;br/&gt;]
+(if:$droneInspected is false)[[[ - Inspect a drone-&gt;Inspect Drone]]&lt;br/&gt;]
+(if:$computersInspected and $droneInspected and $prototypeInspected)
+	[
+    [[ - Return to the common room-&gt;Return to Common Room]]
+    (set:$riftLabVisited to true)
+    ]
+}</tw-passagedata><tw-passagedata pid="77" name="Unlock Safe With Kayne" tags="" position="4550,1100" size="100,100">Using the code you found in the captain&#39;s quarters, you unlock the safe. Inside, you find a set of antidote injectables with a label indicating its purpose: to cure those infected with the Virus. You breath a sigh of relief as you take the antidote.
+
+&quot;Hey, I think I found something interesting,&quot; Kayne calls from behind you.
+
+[[ - &quot;What is it?&quot;-&gt;See Replication Notes]]</tw-passagedata><tw-passagedata pid="78" name="See Replication Notes" tags="" position="4700,1100" size="100,100">&quot;I found some notes about replicating the antidote,&quot; Kayne responds as he hands the notes to you. You look through the notes and verify Kayne&#39;s discovery; the notes detail the antidote&#39;s ingredients, production procedure, storage procedure, use instructions, intended effects, and rare side effects, all of which are important in getting the antidote out to the world.
+
+&quot;This is a great find, thanks!&quot; you say.
+
+&quot;No problem,&quot; Kayne answers. &quot;Now let&#39;s get outta here.&quot;
+
+[[ - Leave the Orion-&gt;Leave Orion With Kayne]]</tw-passagedata><tw-passagedata pid="79" name="Leave Orion With Kayne" tags="" position="4850,1100" size="100,100">After returning to the common room, you and Kayne exit the Orion and the adjoining cultist temple. All that is left to do is escape the compound.
+
+[[ - Leave the compound-&gt;No Encounter With Kayne]]</tw-passagedata><tw-passagedata pid="80" name="No Encounter With Kayne" tags="" position="5000,1100" size="100,100">Within a few minutes, you and Kayne walk through the exit and return to your speeders. Here, you both quickly change back into your familiar clothes.
+
+[[ - Leave-&gt;Leave With Antidote and Notes]]</tw-passagedata><tw-passagedata pid="81" name="Leave With Antidote and Notes" tags="Best-Ending" position="5600,1100" size="100,100">You and Kayne hop on your speeders and leave. Relief and hope wash over you, now that you not only have the antidote securely in your possession, but also the antidote&#39;s replication notes as well.
+
+[[ - Return to Title-&gt;Title]]</tw-passagedata></tw-storydata>
 <script title="Twine engine code" data-main="harlowe">(function(){"use strict";
 var require,define;!function(){var e={},r={};require=function(i){var n=e[i];return n&&(r[i]=n[1].apply(void 0,n[0].map(require)),e[i]=void 0),r[i]},(define=function(r,i,n){if("function"==typeof r)return r();e[r]=[i,n]}).amd=!0}();/*!
  * https://github.com/paulmillr/es6-shim
